@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClinicCare | Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cc-primary: #1e74a6; /* Soft Blue */
+            --cc-secondary: #28a745; /* Green */
+            --cc-light-blue: #e0f2f7;
+            --cc-white: #ffffff;
+            --cc-text-dark: #343a40;
+            --cc-bg-light: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--cc-bg-light);
+            color: var(--cc-text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: margin-left 0.3s;
+        }
+        
+        /* ------------------------------------- */
+        /* Sidebar Styling */
+        /* ------------------------------------- */
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -17rem;
+            transition: margin-left 0.3s ease-in-out;
+            background-color: var(--cc-white);
+            border-right: 1px solid #dee2e6;
+            width: 17rem;
+            position: fixed;
+            z-index: 1030; /* Below Navbar */
+        }
+        
+        #page-content-wrapper {
+            width: 100%;
+            padding-left: 0;
+            transition: padding-left 0.3s ease-in-out;
+        }
+
+        /* Toggled State */
+        .toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+        
+        .toggled #page-content-wrapper {
+            padding-left: 17rem; /* Shift content over */
+        }
+
+        .sidebar-heading {
+            padding: 1.5rem 1.25rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cc-primary);
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 1.25rem;
+            color: var(--cc-text-dark);
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .list-group-item i {
+            width: 1.5rem; /* Standardize icon width */
+        }
+
+        .list-group-item:hover {
+            background-color: var(--cc-light-blue);
+            color: var(--cc-primary);
+            font-weight: 500;
+            border-radius: 0.25rem;
+        }
+        
+        .list-group-item.active-link {
+            background-color: var(--cc-primary);
+            color: var(--cc-white);
+            font-weight: 600;
+        }
+        
+        /* ------------------------------------- */
+        /* Card Styling */
+        /* ------------------------------------- */
+        .cc-card {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+        }
+        
+        .cc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        /* ------------------------------------- */
+        /* Utility */
+        /* ------------------------------------- */
+        .btn-cc-primary {
+            background-color: var(--cc-primary);
+            border-color: var(--cc-primary);
+            color: var(--cc-white);
+        }
+        
+        .btn-cc-primary:hover {
+            background-color: #1a648f;
+            border-color: #1a648f;
+            color: var(--cc-white);
+        }
+
+        .text-cc-primary { color: var(--cc-primary) !important; }
+        .bg-cc-primary { background-color: var(--cc-primary) !important; }
+
+        /* Media Queries for Sidebar */
+        @media (min-width: 992px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                padding-left: 17rem;
+            }
+            .toggled #sidebar-wrapper {
+                margin-left: -17rem;
+            }
+            .toggled #page-content-wrapper {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="d-flex" id="wrapper">
+    <div class="border-end bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading">ClinicCare</div>
+        <div class="list-group list-group-flush p-2">
+            <a href="index.html" class="list-group-item list-group-item-action active-link py-3 rounded mb-2" aria-current="page">
+                <i class="fas fa-fw fa-tachometer-alt"></i> Dashboard
+            </a>
+            <a href="queue.html" class="list-group-item list-group-item-action py-3 rounded mb-2">
+                <i class="fas fa-fw fa-users-line"></i> Queue Management
+            </a>
+            <a href="appointments.html" class="list-group-item list-group-item-action py-3 rounded mb-2">
+                <i class="far fa-fw fa-calendar-check"></i> Appointments
+            </a>
+            <a href="patients.html" class="list-group-item list-group-item-action py-3 rounded mb-2">
+                <i class="fas fa-fw fa-user-injured"></i> Patients
+            </a>
+            <a href="doctors-public.html" class="list-group-item list-group-item-action py-3 rounded mb-2">
+                <i class="fas fa-fw fa-user-md"></i> Doctors
+            </a>
+            <a href="reports.html" class="list-group-item list-group-item-action py-3 rounded mb-2">
+                <i class="fas fa-fw fa-chart-line"></i> Reports
+            </a>
+            <hr class="my-2">
+            <a href="settings.html" class="list-group-item list-group-item-action py-3 rounded mb-2">
+                <i class="fas fa-fw fa-cogs"></i> Settings
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 rounded mb-2 text-danger">
+                <i class="fas fa-fw fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </div>
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm sticky-top">
+            <div class="container-fluid">
+                <button class="btn btn-cc-primary" id="sidebarToggle" title="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="d-flex align-items-center me-3">
+                    <h5 class="my-0 d-none d-md-block text-cc-primary">Dashboard Overview</h5>
+                </div>
+
+                <div class="ms-auto d-flex align-items-center">
+                    <button class="btn btn-outline-secondary me-3 d-none d-sm-block" title="Notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge bg-danger position-absolute translate-middle-y rounded-pill">3</span>
+                    </button>
+                    
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://via.placeholder.com/30/1e74a6/ffffff?text=D" class="rounded-circle me-1" alt="Profile" style="border: 1px solid var(--cc-primary);">
+                            <span class="d-none d-lg-inline">Dr. Smith</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-envelope me-2"></i> Messages</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+       
+<div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="fas fa-user-injured me-2"></i> Patient Management</h2>
+
+    <div class="row">
+        <div class="col-lg-8 mb-4" data-aos="fade-up">
+            <div class="card cc-card shadow">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h6 class="m-0 font-weight-bold text-cc-primary">Registered Patients (345 Total)</h6>
+                    <div class="input-group w-50">
+                        <input type="text" class="form-control" placeholder="Search Patient by Name or ID..." aria-label="Search">
+                        <button class="btn btn-cc-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Patient ID</th>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                    <th>Last Visit</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>P00121</td>
+                                    <td>**Maria Lopez**</td>
+                                    <td>(555) 123-4567</td>
+                                    <td>Today</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View Record</button></td>
+                                </tr>
+                                <tr>
+                                    <td>P00098</td>
+                                    <td>David Kim</td>
+                                    <td>(555) 987-6543</td>
+                                    <td>1 month ago</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View Record</button></td>
+                                </tr>
+                                <tr>
+                                    <td>P00205</td>
+                                    <td>Aisha Khan</td>
+                                    <td>(555) 345-6789</td>
+                                    <td>3 days ago</td>
+                                    <td><button class="btn btn-sm btn-outline-primary">View Record</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4" data-aos="fade-left">
+            <div class="card cc-card shadow">
+                <div class="card-header bg-cc-light-blue py-3">
+                    <h6 class="m-0 font-weight-bold text-cc-primary"><i class="fas fa-user-plus me-1"></i> Register New Patient</h6>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="pFullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="pFullName" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label for="pDOB" class="form-label">DOB</label>
+                                <input type="date" class="form-control" id="pDOB">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="pGender" class="form-label">Gender</label>
+                                <select class="form-select" id="pGender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="pPhone" placeholder="(555) 000-0000">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100"><i class="fas fa-check me-2"></i> Register Patient</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <footer class="bg-white border-top py-3 mt-auto">
+            <div class="container-fluid">
+                <div class="text-center text-muted">
+                    &copy; 2025 ClinicCare Queue & Appointments System. All rights reserved.
+                </div>
+            </div>
+        </footer>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS
+    document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Sidebar Toggle Script
+        var sidebarToggle = document.getElementById('sidebarToggle');
+        var wrapper = document.getElementById('wrapper');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                wrapper.classList.toggle('toggled');
+            });
+        }
+    });
+
+</script>
+
+</body>
+</html>

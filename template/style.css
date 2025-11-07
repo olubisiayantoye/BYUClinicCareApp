@@ -1,0 +1,112 @@
+/* Custom CSS for ClinicCare Dashboard */
+
+/* Color Variables */
+:root {
+    --clinic-primary: #4a90e2; /* Soft Blue */
+    --clinic-secondary: #7ed321; /* Light Green */
+    --clinic-dark: #343a40; /* Dark Grey for Sidebar */
+    --clinic-light: #f8f9fa; /* Light Grey Background */
+}
+
+/* General Body and Layout */
+body {
+    background-color: var(--clinic-light);
+    padding-top: 56px; /* Space for fixed top navbar */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px;
+    background-color: var(--clinic-dark) !important;
+    min-height: 100vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Make sidebar permanent on large screens */
+@media (min-width: 992px) {
+    .sidebar {
+        transform: none !important;
+        position: fixed;
+        left: 0;
+        top: 56px; /* Below the fixed top nav */
+        z-index: 1000;
+        height: calc(100vh - 56px); /* Full height minus top nav */
+    }
+    #page-content-wrapper {
+        margin-left: 280px; /* Space for the fixed sidebar */
+        width: calc(100% - 280px);
+    }
+}
+
+/* Sidebar list items */
+.sidebar .list-group-item {
+    border: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .list-group-item:hover,
+.sidebar .list-group-item.active {
+    background-color: var(--clinic-primary) !important;
+    color: white !important;
+}
+
+.sidebar .list-group-item.active {
+    border-left: 4px solid var(--clinic-secondary); /* Highlight active item */
+}
+
+
+/* Main Content Wrapper */
+#page-content-wrapper {
+    min-width: 100vw;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Summary Card Styling */
+.summary-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+/* Custom button for primary color */
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--clinic-primary) !important;
+    border-color: var(--clinic-primary) !important;
+}
+.btn-outline-primary {
+    color: var(--clinic-primary) !important;
+    border-color: var(--clinic-primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--clinic-primary) !important;
+    color: white !important;
+}
+
+/* Table styling for hover effect */
+.table-hover tbody tr:hover {
+    background-color: rgba(74, 144, 226, 0.1); /* Light blue background on hover */
+}
+
+/* Footer styling */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* AOS Simulation (for effect without including the library) */
+/* In a real project, you would include the AOS library here */
+[data-aos] {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+/* Simulate a simple fade-up animation */
+.show-aos {
+    opacity: 1;
+}

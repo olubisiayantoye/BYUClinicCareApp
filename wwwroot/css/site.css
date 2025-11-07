@@ -1,0 +1,28 @@
+:root {
+    --cc-primary: #1e74a6;
+    --cc-secondary: #28a745;
+    --cc-light-blue: #e0f2f7;
+}
+.navbar-cc {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.hero-section {
+    background-color: var(--cc-light-blue);
+    padding: 100px 0;
+    color: var(--cc-text-dark);
+}
+.feature-icon {
+    color: var(--cc-primary);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.btn-cc-primary {
+    background-color: var(--cc-primary);
+    border-color: var(--cc-primary);
+    color: white;
+}
+.btn-cc-primary:hover {
+    background-color: #1a648f;
+    border-color: #1a648f;
+}

@@ -1,0 +1,127 @@
+@page "/admin/dashboard"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+
+ <h2 class="mb-4" data-aos="fade-right">Welcome back, Dr. Smith!</h2>
+            
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card cc-card h-100 border-start border-5 border-cc-primary">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col me-2">
+                                    <div class="text-xs font-weight-bold text-cc-primary text-uppercase mb-1">Total Patients</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">4,521</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user-injured fa-2x text-cc-primary opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card cc-card h-100 border-start border-5 border-success">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col me-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Today's Appointments</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">24</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="far fa-calendar-alt fa-2x text-success opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card cc-card h-100 border-start border-5 border-warning">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col me-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Waiting Patients</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-clock fa-2x text-warning opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card cc-card h-100 border-start border-5 border-info">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col me-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Doctors on Duty</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">8</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user-md fa-2x text-info opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <div class="row">
+                <div class="col-lg-8 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card cc-card shadow mb-4">
+                        <div class="card-header bg-white py-3">
+                            <h6 class="m-0 font-weight-bold text-cc-primary">Recent Appointments</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Patient Name</th>
+                                            <th>Time</th>
+                                            <th>Doctor</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Jane Doe</td>
+                                            <td>9:30 AM</td>
+                                            <td>Dr. Alice</td>
+                                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Smith</td>
+                                            <td>10:00 AM</td>
+                                            <td>Dr. Smith</td>
+                                            <td><span class="badge bg-success">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Emily Brown</td>
+                                            <td>10:30 AM</td>
+                                            <td>Dr. Alice</td>
+                                            <td><span class="badge bg-danger">Cancelled</span></td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="card cc-card shadow mb-4">
+                        <div class="card-header bg-white py-3">
+                            <h6 class="m-0 font-weight-bold text-cc-primary">Quick Actions</h6>
+                        </div>
+                        <div class="card-body">
+                            <a href="appointments.html" class="btn btn-outline-success btn-lg w-100 mb-3"><i class="far fa-calendar-plus me-2"></i> Book New Appointment</a>
+                            <a href="queue.html" class="btn btn-outline-warning btn-lg w-100 mb-3"><i class="fas fa-users-line me-2"></i> View Live Queue</a>
+                            <a href="#" class="btn btn-outline-info btn-lg w-100"><i class="fas fa-user-plus me-2"></i> Register New Patient</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 

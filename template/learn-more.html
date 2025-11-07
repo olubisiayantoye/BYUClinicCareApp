@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClinicCare | [PAGE TITLE HERE]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --cc-primary: #1e74a6; /* Soft Blue */
+            --cc-secondary: #28a745; /* Green */
+            --cc-light-blue: #e0f2f7;
+        }
+        .navbar-cc {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .hero-title {
+            background-color: var(--cc-light-blue);
+            padding: 60px 0;
+        }
+        .btn-cc-primary {
+            background-color: var(--cc-primary);
+            border-color: var(--cc-primary);
+            color: white;
+        }
+        .btn-cc-primary:hover {
+            background-color: #1a648f;
+            border-color: #1a648f;
+        }
+        .cc-logo {
+            color: var(--cc-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        /* Card styling for doctors and services */
+        .cc-card-public {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: none;
+            transition: transform 0.2s;
+        }
+        .cc-card-public:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-cc sticky-top">
+    <div class="container">
+        <a class="navbar-brand cc-logo" href="landing.html">
+            <i class="fas fa-heartbeat text-cc-primary me-2"></i> ClinicCare
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="doctors-public.html">Our Doctors</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-success" href="book-online.html"><i class="far fa-calendar-alt me-1"></i> Book Appointment</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="hero-title">
+    <div class="container">
+        <h1 class="text-cc-primary fw-bold">Our Mission: Compassion, Quality, Innovation</h1>
+        <p class="lead">Discover the ClinicCare difference and our commitment to your health journey.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mb-4">
+                <h3 class="text-cc-primary mb-3">Who We Are</h3>
+                <p>ClinicCare Health Center was founded in 2015 with a simple goal: to make high-quality healthcare accessible, efficient, and compassionate. We believe that technology should support, not hinder, the patient experience, which led to the creation of our integrated Queue & Appointments System.</p>
+                <p>We are a dedicated team of general practitioners and specialists committed to serving the local community with integrity and expertise.</p>
+                
+                <h3 class="text-cc-primary mt-5 mb-3">Our Core Values</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> **Excellence:** Delivering the highest standards of medical care.</li>
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> **Empathy:** Treating every patient with respect and understanding.</li>
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> **Efficiency:** Utilizing modern systems to reduce wait times and streamline processes.</li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-5 mb-4">
+                <div class="card cc-card-public shadow p-4 bg-cc-light-blue h-100">
+                    <h4 class="text-cc-primary">Why Choose ClinicCare?</h4>
+                    <p>We combine personalized care with cutting-edge digital tools to offer a seamless healthcare experience.</p>
+                    <a href="doctors-public.html" class="btn btn-cc-primary w-100 mb-3"><i class="fas fa-user-md me-2"></i> Meet Our Professionals</a>
+                    <a href="contact.html" class="btn btn-outline-success w-100"><i class="fas fa-location-arrow me-2"></i> Find Our Location</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 ClinicCare Health Center. Quality Healthcare You Can Trust.</p>
+        <p class="small mt-1"><i class="fas fa-map-marker-alt"></i> 123 Health Ave, Medical City | <i class="fas fa-phone-alt"></i> (555) 000-0000</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

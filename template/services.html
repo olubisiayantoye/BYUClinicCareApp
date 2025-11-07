@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClinicCare | [PAGE TITLE HERE]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --cc-primary: #1e74a6; /* Soft Blue */
+            --cc-secondary: #28a745; /* Green */
+            --cc-light-blue: #e0f2f7;
+        }
+        .navbar-cc {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .hero-title {
+            background-color: var(--cc-light-blue);
+            padding: 60px 0;
+        }
+        .btn-cc-primary {
+            background-color: var(--cc-primary);
+            border-color: var(--cc-primary);
+            color: white;
+        }
+        .btn-cc-primary:hover {
+            background-color: #1a648f;
+            border-color: #1a648f;
+        }
+        .cc-logo {
+            color: var(--cc-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        /* Card styling for doctors and services */
+        .cc-card-public {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: none;
+            transition: transform 0.2s;
+        }
+        .cc-card-public:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-cc sticky-top">
+    <div class="container">
+        <a class="navbar-brand cc-logo" href="landing.html">
+            <i class="fas fa-heartbeat text-cc-primary me-2"></i> ClinicCare
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="doctors-public.html">Our Doctors</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-success" href="book-online.html"><i class="far fa-calendar-alt me-1"></i> Book Appointment</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="hero-title">
+    <div class="container">
+        <h1 class="text-cc-primary fw-bold">Our Comprehensive Health Services</h1>
+        <p class="lead">We are committed to providing expert care across multiple medical disciplines.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+            <div class="col">
+                <div class="card cc-card-public h-100 p-3">
+                    <i class="fas fa-stethoscope fa-3x text-cc-primary mb-3"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">General Practice & Family Care</h5>
+                        <p class="card-text">Annual physicals, sick visits, preventative medicine, and general health screenings for all ages.</p>
+                        <a href="book-online.html" class="btn btn-sm btn-outline-cc-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card cc-card-public h-100 p-3">
+                    <i class="fas fa-child fa-3x text-cc-primary mb-3"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Pediatrics</h5>
+                        <p class="card-text">Specialized care for infants, children, and adolescents, including vaccinations and growth monitoring.</p>
+                        <a href="book-online.html" class="btn btn-sm btn-outline-cc-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card cc-card-public h-100 p-3">
+                    <i class="fas fa-notes-medical fa-3x text-cc-primary mb-3"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Diagnostic & Lab Services</h5>
+                        <p class="card-text">On-site blood testing, X-rays, ECGs, and immediate lab result processing for faster diagnosis.</p>
+                        <a href="contact.html" class="btn btn-sm btn-outline-cc-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card cc-card-public h-100 p-3">
+                    <i class="fas fa-heartbeat fa-3x text-cc-primary mb-3"></i>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Chronic Disease Management</h5>
+                        <p class="card-text">Long-term care plans for conditions like diabetes, hypertension, and asthma.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 ClinicCare Health Center. Quality Healthcare You Can Trust.</p>
+        <p class="small mt-1"><i class="fas fa-map-marker-alt"></i> 123 Health Ave, Medical City | <i class="fas fa-phone-alt"></i> (555) 000-0000</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

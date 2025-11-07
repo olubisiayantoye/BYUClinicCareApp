@@ -1,0 +1,125 @@
+
+        :root {
+            --cc-primary: #1e74a6; /* Soft Blue */
+            --cc-secondary: #28a745; /* Green */
+            --cc-light-blue: #e0f2f7;
+            --cc-white: #ffffff;
+            --cc-text-dark: #343a40;
+            --cc-bg-light: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--cc-bg-light);
+            color: var(--cc-text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: margin-left 0.3s;
+        }
+        
+        /* ------------------------------------- */
+        /* Sidebar Styling */
+        /* ------------------------------------- */
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -17rem;
+            transition: margin-left 0.3s ease-in-out;
+            background-color: var(--cc-white);
+            border-right: 1px solid #dee2e6;
+            width: 17rem;
+            position: fixed;
+            z-index: 1030; /* Below Navbar */
+        }
+        
+        #page-content-wrapper {
+            width: 100%;
+            padding-left: 0;
+            transition: padding-left 0.3s ease-in-out;
+        }
+
+        /* Toggled State */
+        .toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+        
+        .toggled #page-content-wrapper {
+            padding-left: 17rem; /* Shift content over */
+        }
+
+        .sidebar-heading {
+            padding: 1.5rem 1.25rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cc-primary);
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 1.25rem;
+            color: var(--cc-text-dark);
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .list-group-item i {
+            width: 1.5rem; /* Standardize icon width */
+        }
+
+        .list-group-item:hover {
+            background-color: var(--cc-light-blue);
+            color: var(--cc-primary);
+            font-weight: 500;
+            border-radius: 0.25rem;
+        }
+        
+        .list-group-item.active-link {
+            background-color: var(--cc-primary);
+            color: var(--cc-white);
+            font-weight: 600;
+        }
+        
+        /* ------------------------------------- */
+        /* Card Styling */
+        /* ------------------------------------- */
+        .cc-card {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+        }
+        
+        .cc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        /* ------------------------------------- */
+        /* Utility */
+        /* ------------------------------------- */
+        .btn-cc-primary {
+            background-color: var(--cc-primary);
+            border-color: var(--cc-primary);
+            color: var(--cc-white);
+        }
+        
+        .btn-cc-primary:hover {
+            background-color: #1a648f;
+            border-color: #1a648f;
+            color: var(--cc-white);
+        }
+
+        .text-cc-primary { color: var(--cc-primary) !important; }
+        .bg-cc-primary { background-color: var(--cc-primary) !important; }
+
+        /* Media Queries for Sidebar */
+        @media (min-width: 992px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                padding-left: 17rem;
+            }
+            .toggled #sidebar-wrapper {
+                margin-left: -17rem;
+            }
+            .toggled #page-content-wrapper {
+                padding-left: 0;
+            }
+        }
