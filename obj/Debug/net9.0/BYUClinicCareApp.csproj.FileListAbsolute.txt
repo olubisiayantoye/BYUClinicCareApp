@@ -104,9 +104,9 @@ C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\refint
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.pdb
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.genruntimeconfig.cache
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\ref\BYUClinicCareApp.dll
-C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\6nr1201vv5-nfz5jevn85.gz
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.RazorAssemblyInfo.cache
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.RazorAssemblyInfo.cs
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\8kqc21p9y1-u55f6cxnya.gz
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\phs79lr8mg-v0tcln1ij8.gz
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.sourcelink.json
+C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\6nr1201vv5-mm17sv18jh.gz

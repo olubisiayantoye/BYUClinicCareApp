@@ -56,8 +56,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcV2ViXEhlYWRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Layout/Web/Navigate.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcV2ViXE5hdmlnYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Layout/Web/WebLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcV2ViXFdlYkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Layout/Web/WebLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcV2ViXFdlYkxvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Admin/Dashboard.razor]
@@ -72,12 +80,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcQWJvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Bookonline.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcQm9va29ubGluZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Consultation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcQ29uc3VsdGF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Contact.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Doctorspublic.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcRG9jdG9yc3B1YmxpYy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Learnmore.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcTGVhcm5tb3JlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Web/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Routes.razor]
