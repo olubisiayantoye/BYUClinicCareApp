@@ -107,7 +107,7 @@ C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\ref\BY
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.RazorAssemblyInfo.cache
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.RazorAssemblyInfo.cs
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\8kqc21p9y1-u55f6cxnya.gz
-C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\phs79lr8mg-v0tcln1ij8.gz
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\BYUClinicCareApp.sourcelink.json
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\6nr1201vv5-li7z8wjy5q.gz
 C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\pxfres3cf8-2vmhxsyu8v.gz
+C:\Users\LENOVO\Documents\CSE325project\BYUClinicCareApp\obj\Debug\net9.0\compressed\phs79lr8mg-e3uepd85er.gz

@@ -7,13 +7,50 @@
             --cc-text-dark: #343a40;
             --cc-bg-light: #f8f9fa;
         }
+       /* --- Core Variables (No Change) --- */
+:root {
+    --cc-primary: #1e74a6; /* Soft Blue */
+    --cc-secondary: #28a745; /* Green */
+    --cc-light-blue: #e0f2f7;
+    --cc-white: #ffffff;
+    --cc-text-dark: #343a40;
+    --cc-bg-light: #f8f9fa;
+}
 
-        body {
-            background-color: var(--cc-bg-light);
-            color: var(--cc-text-dark);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: margin-left 0.3s;
-        }
+/* --- Body/Base Styling (No Change) --- */
+body {
+    background-color: var(--cc-bg-light);
+    color: var(--cc-text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: margin-left 0.3s;
+}
+
+/* ------------------------------------- */
+/* Card Styling (Faster CSS Transitions) */
+/* ------------------------------------- */
+.cc-card {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    /* * KEY OPTIMIZATION: Use short, explicit transitions 
+     * on fast properties (transform, box-shadow) 
+  
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;    */
+    border: none;
+    /* Initialize slightly translated down for a smoother lift */
+    transform: translateY(0);
+}
+
+.cc-card:hover {
+    /* Lift effect: moves the card up by 5px */
+    transform: translateY(-5px); 
+    /* Deeper shadow to emphasize the lift */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+}
+
+/* ------------------------------------- */
+/* Utility & Sidebar (Minor change to remove AOS) */
+/* ------------------------------------- */
+/* ... (Rest of the CSS code remains the same, but the AOS import/dependency is no longer needed in the HTML) ... */
         
         /* ------------------------------------- */
         /* Sidebar Styling */
@@ -75,21 +112,7 @@
             font-weight: 600;
         }
         
-        /* ------------------------------------- */
-        /* Card Styling */
-        /* ------------------------------------- */
-        .cc-card {
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: none;
-        }
         
-        .cc-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
         /* ------------------------------------- */
         /* Utility */
         /* ------------------------------------- */
