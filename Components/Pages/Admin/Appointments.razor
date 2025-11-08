@@ -1,0 +1,108 @@
+@page "/admin/appointments"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+
+
+<div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="far fa-calendar-check me-2"></i> Appointments List</h2>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <p class="text-muted">Viewing appointments for today: **Nov 6, 2025**</p>
+        <button class="btn btn-cc-primary" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal" data-aos="zoom-in">
+            <i class="fas fa-plus me-2"></i> Book Appointment
+        </button>
+    </div>
+
+    <div class="card cc-card shadow mb-4" data-aos="fade-up">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="bg-cc-light-blue">
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Time</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>**John Smith**</td>
+                            <td>Dr. Smith</td>
+                            <td>10:00 AM</td>
+                            <td>Routine Checkup</td>
+                            <td><span class="badge bg-success">Confirmed</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-info">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>**Jane Doe**</td>
+                            <td>Dr. Alice</td>
+                            <td>11:00 AM</td>
+                            <td>Fever & Cough</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-info">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>**Peter Jones**</td>
+                            <td>Dr. Brown</td>
+                            <td>2:00 PM</td>
+                            <td>Vaccination</td>
+                            <td><span class="badge bg-danger">Cancelled</span></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-info">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="bookAppointmentModal" tabindex="-1" aria-labelledby="bookAppointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content cc-card">
+            <div class="modal-header bg-cc-primary text-white">
+                <h5 class="modal-title" id="bookAppointmentModalLabel"><i class="far fa-calendar-plus me-2"></i> Book New Appointment</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="patientName" class="form-label">Patient Name</label>
+                        <input type="text" class="form-control" id="patientName" placeholder="Search or Enter Patient Name">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="appDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="appDate" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="appTime" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="appTime" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="doctorSelect" class="form-label">Select Doctor</label>
+                        <select class="form-select" id="doctorSelect" required>
+                            <option selected>Choose...</option>
+                            <option>Dr. Smith (General)</option>
+                            <option>Dr. Alice (Paediatrics)</option>
+                            <option>Dr. Brown (Cardiology)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Reason for Visit</label>
+                        <textarea class="form-control" id="reason" rows="3"></textarea>
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-cc-primary">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

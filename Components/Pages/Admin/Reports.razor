@@ -1,0 +1,72 @@
+@page "/admin/resports"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+
+
+
+<div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="fas fa-chart-line me-2"></i> Reports & Analytics</h2>
+    
+    <div class="card cc-card shadow mb-4 p-3" data-aos="fade-up">
+        <form class="row align-items-end">
+            <div class="col-md-3 mb-3">
+                <label for="reportType" class="form-label">Report Type</label>
+                <select class="form-select" id="reportType">
+                    <option selected>Appointments Summary</option>
+                    <option>Patient Demographics</option>
+                    <option>Revenue Analysis</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="dateFrom" class="form-label">Date From</label>
+                <input type="date" class="form-control" id="dateFrom">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="dateTo" class="form-label">Date To</label>
+                <input type="date" class="form-control" id="dateTo">
+            </div>
+            <div class="col-md-3 mb-3">
+                <button type="submit" class="btn btn-cc-primary w-100"><i class="fas fa-filter me-2"></i> Generate Report</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-7 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card cc-card shadow">
+                <div class="card-header bg-white py-3">
+                    <h6 class="m-0 font-weight-bold text-cc-primary">Monthly Appointment Trend</h6>
+                </div>
+                <div class="card-body text-center p-5">
+                    <p class="text-muted"> [Placeholder for Chart.js/D3.js Line Graph] </p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="card cc-card shadow">
+                <div class="card-header bg-white py-3">
+                    <h6 class="m-0 font-weight-bold text-cc-primary">Key Performance Indicators (KPIs)</h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Total Appointments (Period):
+                        <span class="badge bg-cc-primary fs-6">560</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        No-Show Rate:
+                        <span class="badge bg-danger fs-6">7.5%</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Average Wait Time:
+                        <span class="badge bg-warning text-dark fs-6">15 min</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        New Patients Registered:
+                        <span class="badge bg-success fs-6">85</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
