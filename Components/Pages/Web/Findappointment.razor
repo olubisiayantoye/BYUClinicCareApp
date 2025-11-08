@@ -1,0 +1,42 @@
+@page "/findappointment"
+@layout BYUClinicCareApp.Components.Layout.Web.WebLayout
+
+
+<main>
+    <section class="hero-title">
+    <div class="container">
+        <h1 class="text-cc-primary fw-bold">Find & Manage Your Existing Appointment</h1>
+        <p class="lead">Enter your details to view, reschedule, or cancel a booked visit.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card cc-card-public shadow p-5 text-center">
+                    <h4 class="mb-4 text-cc-primary"><i class="fas fa-search me-2"></i> Appointment Lookup</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="findAppID" class="form-label">Appointment ID</label>
+                            <input type="text" class="form-control form-control-lg text-center" id="findAppID" placeholder="e.g., APP-10034" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="findDOB" class="form-label">Patient Date of Birth (for verification)</label>
+                            <input type="date" class="form-control form-control-lg text-center" id="findDOB" required>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-cc-primary btn-lg"><i class="fas fa-magnifying-glass me-2"></i> Search Appointment</button>
+                        </div>
+                    </form>
+
+                    <p class="mt-4 text-muted border-top pt-3">
+                        Need help? Call us at (555) 000-0000.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>

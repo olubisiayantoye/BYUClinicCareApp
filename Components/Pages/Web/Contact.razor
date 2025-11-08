@@ -1,0 +1,56 @@
+@page "/contact"
+@layout BYUClinicCareApp.Components.Layout.Web.WebLayout
+
+
+<main>
+    <section class="hero-title">
+    <div class="container">
+        <h1 class="text-cc-primary fw-bold">Get In Touch With ClinicCare</h1>
+        <p class="lead">We're here to answer your questions and assist with your health needs.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card cc-card-public shadow h-100 p-4">
+                    <h4 class="mb-3 text-cc-primary">Send Us a Message</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="cName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="cName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="cEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="cMessage" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-cc-primary"><i class="fas fa-paper-plane me-2"></i> Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="card cc-card-public shadow h-100 p-4">
+                    <h4 class="mb-3 text-cc-primary">Clinic Information</h4>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt fa-fw me-2 text-cc-primary"></i> 123 Health Ave, Medical City, 10001</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt fa-fw me-2 text-cc-primary"></i> (555) 000-0000 (Appointments)</li>
+                        <li class="mb-2"><i class="fas fa-envelope fa-fw me-2 text-cc-primary"></i> info@cliniccare.com</li>
+                        <li><i class="fas fa-clock fa-fw me-2 text-cc-primary"></i> Mon - Fri: 8:00 AM - 5:00 PM</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">Location Map</h6>
+                    <div class="bg-light border text-center p-5" style="min-height: 200px;">
+                        [Placeholder for Google Maps Embed]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
