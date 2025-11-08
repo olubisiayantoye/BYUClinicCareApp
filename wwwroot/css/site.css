@@ -27,3 +27,7 @@
     border-color: #1a648f;
 }
 
+ .hero-title {
+            background-color: var(--cc-light-blue);
+            padding: 60px 0;
+        }
