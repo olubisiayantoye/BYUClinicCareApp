@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BYUClinicCareApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0dc7791f9fd1f542e6f3e1a1ded4259aae5608d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d31719b6d2e55456249b3169ba14a01447c6408")]
 [assembly: System.Reflection.AssemblyProductAttribute("BYUClinicCareApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BYUClinicCareApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

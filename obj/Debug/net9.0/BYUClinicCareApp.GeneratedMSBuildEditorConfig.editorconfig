@@ -68,12 +68,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcV2ViXFdlYkxvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Admin/Dashboard copy.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxEYXNoYm9hcmQgY29weS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Admin/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxEYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Admin/Queue.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxRdWV1ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LENOVO/Documents/CSE325project/BYUClinicCareApp/Components/Pages/Error.razor]

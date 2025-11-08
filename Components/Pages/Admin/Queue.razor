@@ -1,0 +1,62 @@
+@page "/admin/queue"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+
+         <div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="fas fa-users-line me-2"></i> Live Queue Management</h2>
+    
+    <div class="card cc-card shadow mb-4" data-aos="fade-up">
+        <div class="card-header bg-cc-primary text-white py-3">
+            <h6 class="m-0 font-weight-bold"><i class="fas fa-list-ol me-2"></i> Today's Waiting List</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Token No.</th>
+                            <th>Patient Name</th>
+                            <th>Time Arrived</th>
+                            <th>Consulting Doctor</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-warning">
+                            <td>**A01**</td>
+                            <td>Sarah Connor</td>
+                            <td>8:45 AM</td>
+                            <td>Dr. Smith</td>
+                            <td><span class="badge bg-warning text-dark p-2 rounded-pill"><i class="fas fa-clock me-1"></i> Waiting</span></td>
+                            <td><button class="btn btn-sm btn-cc-primary">Call Patient</button></td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>**A02**</td>
+                            <td>**T-800**</td>
+                            <td>8:55 AM</td>
+                            <td>Dr. Alice</td>
+                            <td><span class="badge bg-success p-2 rounded-pill"><i class="fas fa-user-check me-1"></i> Consulting</span></td>
+                            <td><a href="consultation.html" class="btn btn-sm btn-outline-success">Go to Consultation</a></td>
+                        </tr>
+                        <tr>
+                            <td>A03</td>
+                            <td>Kyle Reese</td>
+                            <td>9:10 AM</td>
+                            <td>Dr. Smith</td>
+                            <td><span class="badge bg-warning text-dark p-2 rounded-pill"><i class="fas fa-clock me-1"></i> Waiting</span></td>
+                            <td><button class="btn btn-sm btn-cc-primary">Call Patient</button></td>
+                        </tr>
+                        <tr class="text-muted">
+                            <td>A04</td>
+                            <td>Dr. Silbermann</td>
+                            <td>9:25 AM</td>
+                            <td>Dr. Alice</td>
+                            <td><span class="badge bg-secondary p-2 rounded-pill">Completed</span></td>
+                            <td><button class="btn btn-sm btn-outline-secondary" disabled>Finished</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
