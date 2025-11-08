@@ -1,0 +1,72 @@
+@page "/bookonline"
+@layout BYUClinicCareApp.Components.Layout.Web.WebLayout
+
+
+
+<main>
+    <section class="hero-title">
+    <div class="container">
+        <h1 class="text-cc-primary fw-bold">Book Your Appointment Instantly</h1>
+        <p class="lead">Use our quick form to secure your slot with your preferred doctor.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card cc-card-public shadow p-5">
+                    <h4 class="mb-4 text-cc-primary">Step 1: Patient Information</h4>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="bName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="bName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="bPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="bPhone" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="bReason" class="form-label">Reason for Visit</label>
+                            <select class="form-select" id="bReason" required>
+                                <option selected disabled>Select...</option>
+                                <option>General Checkup</option>
+                                <option>Sickness / Symptoms</option>
+                                <option>Follow-up</option>
+                                <option>Vaccination</option>
+                            </select>
+                        </div>
+
+                        <hr class="my-4">
+                        <h4 class="mb-4 text-cc-primary">Step 2: Select Time & Doctor</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="bDoctor" class="form-label">Doctor</label>
+                                <select class="form-select" id="bDoctor" required>
+                                    <option selected disabled>Any Available Doctor</option>
+                                    <option>Dr. John Smith (General)</option>
+                                    <option>Dr. Alice Chen (Pediatrics)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="bDate" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="bDate" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="bTime" class="form-label">Time Slot</label>
+                            <input type="time" class="form-control" id="bTime" required min="08:00" max="17:00">
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg"><i class="fas fa-check-circle me-2"></i> Confirm Booking</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
