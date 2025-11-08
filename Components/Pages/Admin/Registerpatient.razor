@@ -1,0 +1,99 @@
+@page "/admin/registerpatient"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+
+<div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="fas fa-user-plus me-2"></i> Register New Patient</h2>
+    
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-11">
+            <div class="card cc-card shadow p-4" data-aos="fade-up">
+                <div class="card-header bg-white py-3">
+                    <h6 class="m-0 font-weight-bold text-cc-primary">Patient Demographics and Contact Information</h6>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <h5 class="text-cc-primary mb-3 mt-2">1. Personal Information</h5>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="regFirstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="regFirstName" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="regLastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="regLastName" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="regID" class="form-label">ID/Passport Number</label>
+                                <input type="text" class="form-control" id="regID" placeholder="Optional for system tracking">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-4 mb-3">
+                                <label for="regDOB" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" id="regDOB" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="regGender" class="form-label">Gender</label>
+                                <select class="form-select" id="regGender" required>
+                                    <option selected disabled>Select...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="regMaritalStatus" class="form-label">Marital Status</label>
+                                <select class="form-select" id="regMaritalStatus">
+                                    <option selected disabled>Select...</option>
+                                    <option>Single</option>
+                                    <option>Married</option>
+                                    <option>Divorced</option>
+                                    <option>Widowed</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h5 class="text-cc-primary mb-3 mt-4">2. Contact Information</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="regPhone" class="form-label">Phone Number (Primary)</label>
+                                <input type="tel" class="form-control" id="regPhone" placeholder="(555) 000-0000" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="regEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="regEmail" placeholder="optional@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="regAddress" class="form-label">Residential Address</label>
+                            <textarea class="form-control" id="regAddress" rows="2"></textarea>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h5 class="text-cc-primary mb-3 mt-4">3. Initial Medical & History</h5>
+                        
+                        <div class="mb-4">
+                            <label for="regAllergies" class="form-label">Known Allergies (Drug/Food/Other)</label>
+                            <input type="text" class="form-control" id="regAllergies" placeholder="List all known allergies, separated by commas (e.g., Penicillin, Peanuts)">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="regEmergencyContact" class="form-label">Emergency Contact Name & Phone</label>
+                            <input type="text" class="form-control" id="regEmergencyContact" placeholder="Name and number (e.g., Sarah Doe, 555-123-4567)">
+                        </div>
+
+                        <div class="d-flex justify-content-end pt-3 border-top">
+                            <button type="reset" class="btn btn-outline-danger me-2">Clear Form</button>
+                            <button type="submit" class="btn btn-success btn-lg"><i class="fas fa-check me-2"></i> Register Patient & Generate UHID</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
