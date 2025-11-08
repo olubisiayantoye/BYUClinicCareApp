@@ -1,0 +1,73 @@
+
+@page "/admin/consultation"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+
+       
+<div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="fas fa-notes-medical me-2"></i> Consultation: John Smith (#1001)</h2>
+    
+    <div class="card cc-card shadow mb-4" data-aos="fade-up">
+        <div class="card-header bg-light py-3">
+            <h6 class="m-0 font-weight-bold text-cc-primary">Patient Vitals & History</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3"><strong>Age/Gender:</strong> 35 / Male</div>
+                <div class="col-md-3"><strong>Height/Weight:</strong> 175cm / 80kg</div>
+                <div class="col-md-3"><strong>Last Visit:</strong> 2 weeks ago</div>
+                <div class="col-md-3"><strong>Known Allergies:</strong> Penicillin</div>
+                <div class="col-12 mt-2">
+                    <span class="badge bg-info p-2 me-2">BP: 120/80</span>
+                    <span class="badge bg-info p-2 me-2">Temp: 37.0°C</span>
+                    <span class="badge bg-info p-2">SPO2: 98%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cc-card shadow mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-header bg-cc-light-blue py-3">
+            <h6 class="m-0 font-weight-bold text-cc-primary">Doctor's Notes & Prescription</h6>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label for="chiefComplaint" class="form-label">Chief Complaint & Symptoms</label>
+                    <textarea class="form-control" id="chiefComplaint" rows="3" placeholder="e.g., Patient reports a persistent headache and mild fever for 2 days."></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="diagnosis" class="form-label">Diagnosis / ICD-10 Code</label>
+                    <input type="text" class="form-control" id="diagnosis" placeholder="e.g., J06.9 - Acute upper respiratory infection, unspecified">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="prescription" class="form-label">Prescription & Medication</label>
+                    <textarea class="form-control" id="prescription" rows="5" placeholder="e.g., 1. Paracetamol 500mg - 1 tablet three times a day (T.I.D) for 3 days."></textarea>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="followUp" class="form-label">Follow-up Date</label>
+                        <input type="date" class="form-control" id="followUp">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="consultationStatus" class="form-label">Consultation Status</label>
+                        <select class="form-select" id="consultationStatus" required>
+                            <option selected>Completed</option>
+                            <option>Further Tests Required</option>
+                            <option>Admitted</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="text-end">
+                    <button type="reset" class="btn btn-outline-danger me-2"><i class="fas fa-eraser me-2"></i> Clear Notes</button>
+                    <button type="submit" class="btn btn-success btn-lg"><i class="fas fa-save me-2"></i> Save & Complete Consultation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
