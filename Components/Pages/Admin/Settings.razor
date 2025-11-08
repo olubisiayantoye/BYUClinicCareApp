@@ -1,0 +1,75 @@
+@page "/admin/settings"
+@layout BYUClinicCareApp.Components.Layout.Admin.AdminLayout
+     
+       
+       
+       
+       <div class="container-fluid py-4">
+    <h2 class="mb-4 text-cc-primary" data-aos="fade-right"><i class="fas fa-cogs me-2"></i> System Settings</h2>
+
+    <div class="card cc-card shadow mb-4" data-aos="fade-up">
+        <div class="card-body">
+            <ul class="nav nav-tabs" id="settingsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button" role="tab" aria-controls="user" aria-selected="false">Users & Roles</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="queue-tab" data-bs-toggle="tab" data-bs-target="#queue" type="button" role="tab" aria-controls="queue" aria-selected="false">Queue Rules</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content pt-3" id="settingsTabContent">
+                
+                <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                    <h5 class="text-cc-primary">Clinic Information</h5>
+                    <form class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="clinicName" class="form-label">Clinic Name</label>
+                            <input type="text" class="form-control" id="clinicName" value="ClinicCare Health Center">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="clinicEmail" class="form-label">Support Email</label>
+                            <input type="email" class="form-control" id="clinicEmail" value="support@cliniccare.com">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="clinicAddress" class="form-label">Address</label>
+                            <textarea class="form-control" id="clinicAddress" rows="2">123 Health Ave, Medical City, 10001</textarea>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-success"><i class="fas fa-save me-2"></i> Save General Settings</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
+                    <h5 class="text-cc-primary">Manage Staff Accounts</h5>
+                    <p class="text-muted">Define access levels and permissions for all system users.</p>
+                    <div class="alert alert-info">
+                        **Current User:** Dr. John Smith (**Admin**)
+                    </div>
+                    <button class="btn btn-outline-cc-primary"><i class="fas fa-user-plus me-2"></i> Invite New User</button>
+                </div>
+                
+                <div class="tab-pane fade" id="queue" role="tabpanel" aria-labelledby="queue-tab">
+                    <h5 class="text-cc-primary">Automated Queue Rules</h5>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="priorityAppointments" checked>
+                        <label class="form-check-label" for="priorityAppointments">
+                            **Prioritize Scheduled Appointments** over Walk-ins.
+                        </label>
+                    </div>
+                    <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" type="checkbox" id="autoNotify" checked>
+                        <label class="form-check-label" for="autoNotify">
+                            **Auto-notify** next patient 10 minutes before consultation time.
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-success"><i class="fas fa-save me-2"></i> Save Queue Rules</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
